@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+<!-- step 1.1 -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Semantic UI Demo</title>
     <!-- step 1.1 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css">
+
     <style>
       .block {
         display: none;
@@ -26,6 +30,7 @@
     </style>
   </head>
   <body>
+    
     <div class='ui container'>
       <div class='ui inverted red menu'>
         <div class='item'>
@@ -71,6 +76,8 @@
           <div class='example'>
             <!-- Step 2.1 -->
             <div class='code'>
+              <!-- Step 2.1 -->
+<button class="ui button" id="follow">Follow</button>
               &lt button class="ui button" &gt
               Follow
               &lt /button &gt
@@ -78,6 +85,8 @@
           </div>
           <div class='example'>
             <!-- Step 2.2 -->
+            <!-- Step 2.2 -->
+<button class="ui primary button" id="save">Save</button>
             <div class='code'>
               &lt button class="ui primary button"&gt
               <br>
@@ -87,6 +96,7 @@
 
             </div>
           </div>
+
           <h2 class='ui header'>Input</h2>
           <div class='example'>
             <div class="ui input">
@@ -141,8 +151,15 @@
         </div>
       </div>
     </div>
+    <button class="ui button" id="follow">Follow</button>
+    <button class="ui primary button" id="save">Save</button>
 
     <!-- step 1.2 -->
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
     <script>
       $('a.item').click(e => {
         $(`.block:nth-child(${$('a.item.active').index() + 1})`).transition('scale')
@@ -153,11 +170,26 @@
       $('a.item:nth-child(2)').click()
 
       //-- Step 3 code here --
+      $('#follow').click(e => {
+  $('#follow').transition('bounce')
+})
+$('#save').click(e => {
+  $('#save').transition('tada')
+})
       $('.ui.buttons .basic.button').click(e => {
+      
         let action = $(e.target).html()
         $('.demo').transition(action)
         $('.block:last-child .code').html(`$(".demo").transition("${action}")`)
       })
+
+
     </script>
+
+<script
+src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
   </body>
 </html>
